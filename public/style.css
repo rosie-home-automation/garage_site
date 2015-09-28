@@ -1,0 +1,16 @@
+body, a { color: rgba(0,0,0,0.5); text-decoration: none;
+       font-family: HelveticaNeue-UltraLight, 'Helvetica Neue UltraLight', 'Helvetica Neue', Open-Light, sans-serif; }
+body.open { background-color: #903D3D; }
+body.closed { background-color: #5CBF94; }
+body.unknown { background-color: #E5E5E5; }
+
+body.open .state::before { content: "Open"; }
+body.closed .state::before { content: "Closed"; }
+body.unknown .state::before { content: "???"; }
+
+body.open .toggle a::before { content: "Close "; }
+body.closed .toggle a::before { content: "Open "; }
+body.unknown .toggle { display:none; }
+
+.state { font-size:100px; text-align:center; width:300px; margin:90px auto; }
+.toggle { text-align:center; font-size: 20px; }
